@@ -35,7 +35,9 @@ public class AdminController {
 	@PutMapping("/admindisableuser/{id}")
 	public ResponseEntity<?> disableUser(@RequestBody Users user,@PathVariable int id){
 		Users u = userServiceImpl.disableUser(user, id);
+		System.out.println("This is for practice demo push");
 		return new ResponseEntity<>(u, HttpStatus.OK);
+	
 	}
 
 	@PutMapping("/adminenableuser/{id}")
